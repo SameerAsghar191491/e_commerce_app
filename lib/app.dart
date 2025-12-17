@@ -1,5 +1,6 @@
 // ignore_for_file: unused_import
 
+import 'package:e_commerce_app/features/authentication/screens/login/login.dart';
 import 'package:e_commerce_app/features/authentication/screens/onboarding/onboarding.dart';
 import 'package:e_commerce_app/splash_screen.dart';
 import 'package:e_commerce_app/utils/theme/theme.dart';
@@ -25,7 +26,7 @@ class MainApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: MyAppTheme.lightTheme,
       darkTheme: MyAppTheme.darkTheme,
-      home: SplashScreen(),
+      home: Login(),
     );
   }
 }
