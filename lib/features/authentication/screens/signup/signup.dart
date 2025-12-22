@@ -1,23 +1,21 @@
 import 'package:e_commerce_app/common/widgets/login_signup/form_divider.dart';
 import 'package:e_commerce_app/common/widgets/login_signup/social_buttons.dart';
+import 'package:e_commerce_app/features/authentication/screens/signup/email_verification.dart';
 import 'package:e_commerce_app/features/authentication/screens/signup/widgets/signup_form.dart';
 import 'package:e_commerce_app/features/authentication/screens/signup/widgets/termsconditions_checkbox.dart';
 import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:e_commerce_app/utils/constants/text_strings.dart';
-import 'package:e_commerce_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
+import 'package:get/route_manager.dart';
 
 class Signup extends StatelessWidget {
   const Signup({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final dark = AppHelperFunctions.isDarkMode(context);
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 40,
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       ),
       body: SingleChildScrollView(
@@ -44,14 +42,16 @@ class Signup extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.primary,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(() => EmailVerification());
+                  },
                   child: Text(AppTexts.signIn),
                 ),
               ),
               const SizedBox(height: AppSizes.spaceBtwSections),
-              FormDivider(dark: dark),
+              const FormDivider(),
               const SizedBox(height: AppSizes.spaceBtwSections),
-              SocialButtons(),
+              const SocialButtons(),
             ],
           ),
         ),

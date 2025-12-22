@@ -2,6 +2,9 @@
 
 import 'package:e_commerce_app/features/authentication/screens/login/login.dart';
 import 'package:e_commerce_app/features/authentication/screens/onboarding/onboarding.dart';
+import 'package:e_commerce_app/features/authentication/screens/signup/email_verification.dart';
+import 'package:e_commerce_app/features/shop/screens/home_screen.dart';
+import 'package:e_commerce_app/navigation_menu.dart';
 import 'package:e_commerce_app/splash_screen.dart';
 import 'package:e_commerce_app/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +29,7 @@ class MainApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: MyAppTheme.lightTheme,
       darkTheme: MyAppTheme.darkTheme,
-      home: OnboardingScreen(),
+      home: HomeScreen(),
     );
   }
 }

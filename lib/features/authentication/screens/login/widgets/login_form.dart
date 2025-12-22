@@ -1,10 +1,11 @@
+import 'package:e_commerce_app/features/authentication/screens/login/widgets/forget_password.dart';
 import 'package:e_commerce_app/features/authentication/screens/signup/signup.dart';
+import 'package:e_commerce_app/navigation_menu.dart';
 import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:e_commerce_app/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
-import 'package:get/state_manager.dart';
 import 'package:iconsax/iconsax.dart';
 
 class LoginForm extends StatelessWidget {
@@ -55,14 +56,21 @@ class LoginForm extends StatelessWidget {
                   Text(AppTexts.rememberMe),
                 ],
               ),
-              Text(AppTexts.forgetPassword),
+              TextButton(
+                onPressed: () {
+                  Get.to(() => ForgetPassword());
+                },
+                child: Text(AppTexts.forgetPassword),
+              ),
             ],
           ),
           const SizedBox(height: AppSizes.spaceBtwSections),
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.to(() => NavigationMenu());
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: AppColors.primary,
               ),
