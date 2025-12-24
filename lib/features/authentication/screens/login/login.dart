@@ -3,7 +3,6 @@ import 'package:e_commerce_app/common/widgets/login_signup/social_buttons.dart';
 import 'package:e_commerce_app/features/authentication/screens/login/widgets/login_form.dart';
 import 'package:e_commerce_app/features/authentication/screens/login/widgets/login_header.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
-import 'package:e_commerce_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
@@ -11,7 +10,6 @@ class Login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = AppHelperFunctions.isDarkMode(context);
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: SingleChildScrollView(
@@ -21,7 +19,7 @@ class Login extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // Login Header with Logo or Title & Subtitle
-              LoginHeader(dark: dark),
+              const LoginHeader(),
 
               const SizedBox(height: AppSizes.spaceBtwItems),
 
@@ -29,7 +27,7 @@ class Login extends StatelessWidget {
               const LoginForm(),
 
               // Common FormDivider with Text
-              FormDivider(dark: dark),
+              const FormDivider(),
 
               const SizedBox(height: AppSizes.spaceBtwSections),
 
