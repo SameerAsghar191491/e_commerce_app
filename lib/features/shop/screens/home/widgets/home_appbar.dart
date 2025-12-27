@@ -1,4 +1,4 @@
-import 'package:e_commerce_app/common/widgets/appbar/custom_appbar.dart';
+import 'package:e_commerce_app/common/widgets/app_bar/custom_appbar.dart';
 import 'package:e_commerce_app/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/text_strings.dart';
@@ -11,7 +11,7 @@ class HomeAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomAppbar(
+    return CustomAppBar(
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

@@ -26,7 +26,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       padding: EdgeInsetsGeometry.only(
         right: AppSizes.defaultSpace / 2,
         left: AppSizes.defaultSpace / 2,
-        top: AppSizes.appBarHeight / 1.5,
+        // top: AppSizes.appBarHeight / 1.5,
       ),
       child: AppBar(
         backgroundColor: Colors.transparent,
