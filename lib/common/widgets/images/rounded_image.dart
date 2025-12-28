@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 class RoundedImage extends StatelessWidget {
   const RoundedImage({
+    this.margin = const EdgeInsets.all(0),
     super.key,
     this.border,
     this.padding,
@@ -28,6 +29,7 @@ class RoundedImage extends StatelessWidget {
   final bool isNetworkImage;
   final VoidCallback? onPressed;
   final double borderRadius;
+  final EdgeInsets margin;
 
   @override
   Widget build(BuildContext context) {
@@ -37,6 +39,7 @@ class RoundedImage extends StatelessWidget {
         height: height,
         width: width,
         padding: padding,
+        // margin: margin,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(AppSizes.md),
           border: border,

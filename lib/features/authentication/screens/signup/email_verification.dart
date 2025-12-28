@@ -16,13 +16,17 @@ class EmailVerification extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         automaticallyImplyLeading: false,
         actions: [
-          IconButton(
-            onPressed: () {
-              Get.offAll(() => Login());
-            },
-            icon: Icon(CupertinoIcons.clear),
+          Padding(
+            padding: const EdgeInsets.only(right: 5),
+            child: IconButton(
+              onPressed: () {
+                Get.offAll(() => Login());
+              },
+              icon: Icon(CupertinoIcons.clear),
+            ),
           ),
         ],
       ),

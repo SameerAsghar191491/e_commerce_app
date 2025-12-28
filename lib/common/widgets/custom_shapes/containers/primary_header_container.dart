@@ -26,6 +26,8 @@ class PrimaryHeaderContainer extends StatelessWidget {
                 child: CircularContainers(
                   backgroundColor: AppColors.textWhite.withValues(alpha: 0.1),
                   radius: 200,
+                  height: 400,
+                  width: 400,
                 ),
               ),
               Positioned(
@@ -34,6 +36,8 @@ class PrimaryHeaderContainer extends StatelessWidget {
                 child: CircularContainers(
                   backgroundColor: AppColors.textWhite.withValues(alpha: 0.1),
                   radius: 200,
+                  height: 400,
+                  width: 400,
                 ),
               ),
               child,

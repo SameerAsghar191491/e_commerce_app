@@ -69,7 +69,7 @@ class LoginForm extends StatelessWidget {
             width: double.infinity,
             child: ElevatedButton(
               onPressed: () {
-                Get.to(() => NavigationMenu());
+                Get.off(() => NavigationMenu());
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: AppColors.primary,

@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/common/styles/spacing_styles.dart';
 import 'package:e_commerce_app/common/widgets/login_signup/form_divider.dart';
 import 'package:e_commerce_app/common/widgets/login_signup/social_buttons.dart';
 import 'package:e_commerce_app/features/authentication/screens/login/widgets/login_form.dart';
@@ -14,7 +15,7 @@ class Login extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(AppSizes.defaultSpace),
+          padding: SpacingStyle.paddingWithAppBarHeight,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

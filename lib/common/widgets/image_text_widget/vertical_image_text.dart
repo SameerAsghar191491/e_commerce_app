@@ -33,9 +33,7 @@ class VerticalImageText extends StatelessWidget {
               height: 56,
               width: 56,
               decoration: BoxDecoration(
-                color:
-                    backgroundColor ??
-                    (darkMode ? AppColors.black : AppColors.white),
+                color: (darkMode ? AppColors.black : AppColors.white),
                 borderRadius: BorderRadius.circular(100),
               ),
               child: Center(

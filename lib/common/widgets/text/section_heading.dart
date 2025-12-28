@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class SectionHeading extends StatelessWidget {
   const SectionHeading({
     super.key,
-    this.showActionButton,
+    this.showActionButton = true,
     this.buttonTitle = "View All",
     this.textColor,
     required this.title,
