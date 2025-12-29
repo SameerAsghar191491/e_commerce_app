@@ -2,6 +2,7 @@ import 'package:e_commerce_app/common/icons/circular_icon.dart';
 import 'package:e_commerce_app/common/styles/shadow.dart';
 import 'package:e_commerce_app/common/widgets/custom_shapes/containers/rounded_containers.dart';
 import 'package:e_commerce_app/common/widgets/images/rounded_image.dart';
+import 'package:e_commerce_app/common/widgets/text/product_price_text.dart';
 import 'package:e_commerce_app/common/widgets/text/product_title_text.dart';
 import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/image_strings.dart';
@@ -104,61 +105,36 @@ class ProductCardVertical extends StatelessWidget {
                       ),
                     ],
                   ),
-                  // Spacer(),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      ProductPriceText(price: '35.5'),
-                      Container(
-                        decoration: BoxDecoration(
-                          color: AppColors.dark,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(AppSizes.cardRadiusMd),
-                            bottomRight: Radius.circular(
-                              AppSizes.productImageRadius,
-                            ),
-                          ),
-                        ),
-                        child: SizedBox(
-                          height: AppSizes.iconLg * 1.2,
-                          width: AppSizes.iconLg * 1.2,
-                          child: Icon(Iconsax.add, color: AppColors.white),
-                        ),
-                      ),
-                    ],
-                  ),
                 ],
               ),
+            ),
+            Spacer(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.only(left: AppSizes.sm),
+                  child: ProductPriceText(price: '35.5', isLarge: false),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: AppColors.dark,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(AppSizes.cardRadiusMd),
+                      bottomRight: Radius.circular(AppSizes.productImageRadius),
+                    ),
+                  ),
+                  child: SizedBox(
+                    height: AppSizes.iconLg * 1.2,
+                    width: AppSizes.iconLg * 1.2,
+                    child: Icon(Iconsax.add, color: AppColors.white),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
       ),
-    );
-  }
-}
-
-class ProductPriceText extends StatelessWidget {
-  const ProductPriceText({
-    super.key,
-    this.currencySign = "\$",
-    required this.price,
-    this.maxlines,
-    this.isLarge = false,
-    this.lineThrough = false,
-  });
-
-  final String currencySign, price;
-  final int? maxlines;
-  final bool isLarge;
-  final bool lineThrough;
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      currencySign + price,
-      overflow: TextOverflow.ellipsis,
-      maxLines: 1,
-      style: isLarge ? Theme.of(context).textTheme.headlineMedium!.apply(decoration: lineThrough ? TextDecoration.lineThrough : null) : Theme.of(context).textTheme.headlineMedium!.apply(decoration: lineThrough ? TextDecoration.lineThrough : null),
     );
   }
 }

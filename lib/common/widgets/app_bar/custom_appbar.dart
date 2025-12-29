@@ -10,7 +10,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.actions,
     this.leadingIcon,
     this.isLeading = false,
-    this.title,
+    required this.title,
     this.leadingOnPressed,
   });
 
@@ -24,6 +24,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsetsGeometry.only(
+        top: AppSizes.defaultSpace * 1,
         right: AppSizes.defaultSpace / 2,
         left: AppSizes.defaultSpace / 2,
         // top: AppSizes.appBarHeight / 1.5,

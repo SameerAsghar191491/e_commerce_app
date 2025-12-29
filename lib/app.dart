@@ -28,7 +28,7 @@ class MainApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: MyAppTheme.lightTheme,
       darkTheme: MyAppTheme.darkTheme,
-      home: Login(),
+      home: NavigationMenu(),
     );
   }
 }

@@ -34,14 +34,19 @@ class HomeScreen extends StatelessWidget {
                     padding: const EdgeInsets.only(left: AppSizes.defaultSpace),
                     child: Column(
                       children: [
-                        SectionHeading(
-                          title: "Popular Categories",
-                          onPressed: () {},
-                          showActionButton: false,
-                          textColor: AppColors.white,
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            right: AppSizes.defaultSpace,
+                          ),
+                          child: SectionHeading(
+                            title: "Popular Categories",
+                            onPressed: () {},
+                            showActionButton: false,
+                            textColor: AppColors.white,
+                          ),
                         ),
                         const SizedBox(height: AppSizes.spaceBtwItems),
-                        const SectionCategories(),  
+                        const SectionCategories(),
                       ],
                     ),
                   ),
@@ -54,7 +59,7 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 children: [
                   /// -- Promo Slider
-                  PromoSlider(
+                  const PromoSlider(
                     banners: [
                       AppImages.promoBanner1,
                       AppImages.promoBanner2,
