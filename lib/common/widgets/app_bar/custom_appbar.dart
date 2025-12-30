@@ -30,6 +30,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       child: AppBar(
         backgroundColor: Colors.transparent,
+        surfaceTintColor: Colors.transparent,
         automaticallyImplyLeading: isLeading,
         leading: isLeading && leadingIcon == null
             ? IconButton(

@@ -2,6 +2,8 @@ import 'package:e_commerce_app/common/icons/circular_icon.dart';
 import 'package:e_commerce_app/common/styles/shadow.dart';
 import 'package:e_commerce_app/common/widgets/custom_shapes/containers/rounded_containers.dart';
 import 'package:e_commerce_app/common/widgets/images/rounded_image.dart';
+import 'package:e_commerce_app/common/widgets/text/brand_title_with_verified_icon.dart';
+import 'package:e_commerce_app/common/widgets/text/product_price_text.dart';
 import 'package:e_commerce_app/common/widgets/text/product_title_text.dart';
 import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/image_strings.dart';
@@ -88,27 +90,12 @@ class ProductCardVertical extends StatelessWidget {
                     smallSize: true,
                   ),
                   const SizedBox(height: AppSizes.spaceBtwItems / 2),
-                  Row(
-                    children: [
-                      Text(
-                        'Nike',
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: Theme.of(context).textTheme.labelMedium,
-                      ),
-                      const SizedBox(width: AppSizes.xs),
-                      const Icon(
-                        Iconsax.verify5,
-                        color: AppColors.primary,
-                        size: AppSizes.iconXs,
-                      ),
-                    ],
-                  ),
+                  const BrandTitleWithVerifiedIcon(title: 'Nike'),
                   // Spacer(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      ProductPriceText(price: '35.5'),
+                      const ProductPriceText(price: '35.5'),
                       Container(
                         decoration: BoxDecoration(
                           color: AppColors.dark,
@@ -133,32 +120,6 @@ class ProductCardVertical extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class ProductPriceText extends StatelessWidget {
-  const ProductPriceText({
-    super.key,
-    this.currencySign = "\$",
-    required this.price,
-    this.maxlines,
-    this.isLarge = false,
-    this.lineThrough = false,
-  });
-
-  final String currencySign, price;
-  final int? maxlines;
-  final bool isLarge;
-  final bool lineThrough;
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      currencySign + price,
-      overflow: TextOverflow.ellipsis,
-      maxLines: 1,
-      style: isLarge ? Theme.of(context).textTheme.headlineMedium!.apply(decoration: lineThrough ? TextDecoration.lineThrough : null) : Theme.of(context).textTheme.headlineMedium!.apply(decoration: lineThrough ? TextDecoration.lineThrough : null),
     );
   }
 }
