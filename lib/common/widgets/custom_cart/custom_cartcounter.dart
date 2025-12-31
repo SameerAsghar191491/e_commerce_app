@@ -17,7 +17,11 @@ class CartCounterIcon extends StatelessWidget {
         IconButton(
           onPressed: onPressed,
           icon: Icon(Iconsax.shopping_bag),
-          color: darkMode ? AppColors.white : AppColors.dark,
+          color: iconColor != null
+              ? iconColor!
+              : darkMode
+              ? AppColors.white
+              : AppColors.dark,
         ),
         Positioned(
           top: 0,
