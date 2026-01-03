@@ -41,6 +41,9 @@ class ProductCardVertical extends StatelessWidget {
                   RoundedImage(
                     imageUrl: AppImages.productImage1,
                     applyImageRadius: true,
+                    backgroundColor: darkMode
+                        ? AppColors.dark
+                        : AppColors.light,
                   ),
 
                   /// -- Sale Tag

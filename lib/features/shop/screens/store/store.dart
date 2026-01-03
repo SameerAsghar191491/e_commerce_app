@@ -2,10 +2,10 @@ import 'package:e_commerce_app/common/layouts/grid_layout.dart';
 import 'package:e_commerce_app/common/widgets/app_bar/custom_appbar.dart';
 import 'package:e_commerce_app/common/widgets/app_bar/tab_bar.dart';
 import 'package:e_commerce_app/common/widgets/custom_cart/custom_cartcounter.dart';
-import 'package:e_commerce_app/common/widgets/custom_shapes/containers/rounded_containers.dart';
-import 'package:e_commerce_app/common/widgets/products/card/brand_card.dart';
+import 'package:e_commerce_app/common/widgets/brands/brand_card.dart';
 import 'package:e_commerce_app/common/widgets/search_bar/custom_searchbar.dart';
 import 'package:e_commerce_app/common/widgets/text/section_heading.dart';
+import 'package:e_commerce_app/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:e_commerce_app/utils/helpers/helper_functions.dart';
@@ -16,6 +16,7 @@ class StoreScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // final darkMode = HelperFunctions.isDarkMode(context);
     return DefaultTabController(
       length: 5,
       child: Scaffold(
@@ -66,7 +67,7 @@ class StoreScreen extends StatelessWidget {
                         mainAxisExtent: 80,
                         itemCount: 4,
                         itemBuilder: (_, index) {
-                          return BrandCard(showBorder: false);
+                          return const BrandCard(showBorder: false);
                         },
                       ),
                     ],
@@ -86,31 +87,13 @@ class StoreScreen extends StatelessWidget {
               ),
             ];
           },
-          body: TabBarView(
+          body: const TabBarView(
             children: [
-              Padding(
-                padding: const EdgeInsetsGeometry.all(AppSizes.defaultSpace),
-                child: Column(
-                  children: [
-                    // -- Brands
-                    RoundedContainers(
-                      showBorder: true,
-                      borderColor: AppColors.darkGrey,
-                      backgroundColor: Colors.transparent,
-                      margin: const EdgeInsets.only(
-                        bottom: AppSizes.spaceBtwItems,
-                      ),
-                      child: Column(
-                        children: [const BrandCard(showBorder: false)],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(),
-              Container(),
-              Container(),
-              Container(),
+              CategoryTab(),
+              CategoryTab(),
+              CategoryTab(),
+              CategoryTab(),
+              CategoryTab(),
             ],
           ),
         ),

@@ -131,7 +131,7 @@ class StoreScreen extends StatelessWidget {
                 /// -- Tabs
                 bottom: CustomTabBar(
                   tabs: const [
-                    Tab(child: Text('Sports')),
+                    Tab(child: Text('Sameer')),
                     Tab(child: Text('Furniture')),
                     Tab(child: Text('Electronics')),
                     Tab(child: Text('Clothes')),
