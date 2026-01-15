@@ -37,14 +37,15 @@ class ProductDetailsHeader extends StatelessWidget {
               bottom: 30,
               child: SizedBox(
                 height: 80,
-                child: ListView.separated(
+                child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   shrinkWrap: true,
                   itemCount: 6,
-                  separatorBuilder: (_, __) =>
-                      const SizedBox(width: AppSizes.defaultSpace),
+                  // separatorBuilder: (_, _) =>
+                  //     const SizedBox(width: AppSizes.defaultSpace),
                   itemBuilder: (_, index) => RoundedImage(
                     width: 80,
+                    margin: EdgeInsets.only(right: AppSizes.defaultSpace),
                     padding: const EdgeInsets.all(AppSizes.sm),
                     backgroundColor: darkMode
                         ? AppColors.dark
@@ -56,7 +57,6 @@ class ProductDetailsHeader extends StatelessWidget {
                 ),
               ),
             ),
-
             // -- AppBar
             CustomAppBar(
               showBackArrow: true,

@@ -1,4 +1,5 @@
 import 'package:e_commerce_app/utils/constants/colors.dart';
+import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
 class RatingProgressIndicator extends StatelessWidget {
@@ -15,7 +16,8 @@ class RatingProgressIndicator extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(flex: 1, child: Text(text)),
+        Container(alignment: Alignment.center, width: 10, child: Text(text)),
+        const SizedBox(width: AppSizes.spaceBtwItems / 2),
         Expanded(
           flex: 11,
           child: LinearProgressIndicator(

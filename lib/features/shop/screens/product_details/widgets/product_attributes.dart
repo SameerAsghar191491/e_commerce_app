@@ -22,6 +22,7 @@ class ProductAttributes extends StatelessWidget {
               ? AppColors.light.withValues(alpha: 0.1)
               : AppColors.dark.withValues(alpha: 0.1),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 children: [

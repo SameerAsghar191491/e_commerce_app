@@ -14,6 +14,7 @@ class UserReviewCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final darkMode = HelperFunctions.isDarkMode(context);
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -50,6 +51,7 @@ class UserReviewCard extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(AppSizes.cardRadiusLg),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

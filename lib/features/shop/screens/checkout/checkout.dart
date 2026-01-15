@@ -5,7 +5,7 @@ import 'package:e_commerce_app/features/shop/screens/checkout/widgets/customer_d
 import 'package:e_commerce_app/features/shop/screens/checkout/widgets/order_price_details.dart';
 import 'package:e_commerce_app/features/shop/screens/checkout/widgets/payment_method.dart';
 import 'package:e_commerce_app/features/shop/screens/checkout/widgets/promo_code_card.dart';
-import 'package:e_commerce_app/features/shop/screens/checkout/widgets/success_screen.dart';
+import 'package:e_commerce_app/features/shop/screens/checkout/widgets/order_success_screen.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 // ignore: unused_import
 import 'package:e_commerce_app/utils/helpers/helper_functions.dart';

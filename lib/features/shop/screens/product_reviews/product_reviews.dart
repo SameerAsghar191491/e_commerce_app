@@ -1,5 +1,4 @@
 import 'package:e_commerce_app/common/widgets/app_bar/custom_appbar.dart';
-import 'package:e_commerce_app/common/widgets/products/ratings/rating_indicator.dart';
 import 'package:e_commerce_app/features/shop/screens/product_reviews/widgets/overall_product_rating.dart';
 import 'package:e_commerce_app/features/shop/screens/product_reviews/widgets/user_review_card.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
@@ -31,14 +30,6 @@ class ProductReviewsScreen extends StatelessWidget {
 
               const OverallProductRating(),
 
-              const MyRatingBarIndicator(rating: 4.5),
-              Padding(
-                padding: const EdgeInsets.all(5.0),
-                child: Text(
-                  "12,611",
-                  style: Theme.of(context).textTheme.bodySmall,
-                ),
-              ),
               const SizedBox(height: AppSizes.spaceBtwSections),
               UserReviewCard(),
               UserReviewCard(),

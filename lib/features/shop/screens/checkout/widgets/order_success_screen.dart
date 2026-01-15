@@ -1,4 +1,4 @@
-import 'package:e_commerce_app/features/shop/screens/home/home_screen.dart';
+import 'package:e_commerce_app/navigation_menu.dart';
 import 'package:e_commerce_app/utils/constants/image_strings.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
@@ -41,7 +41,7 @@ class OrderSuccessScreen extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () => Get.offAll(() => HomeScreen()),
+                onPressed: () => Get.offAll(() => NavigationMenu()),
                 child: Text("Continue"),
               ),
             ),
