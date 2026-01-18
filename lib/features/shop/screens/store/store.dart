@@ -11,7 +11,6 @@ import 'package:e_commerce_app/features/shop/screens/store/widgets/category_tab.
 import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:e_commerce_app/utils/helpers/helper_functions.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:get/state_manager.dart';
@@ -22,7 +21,6 @@ class StoreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // final darkMode = HelperFunctions.isDarkMode(context);
-    FirebaseAuth auth = FirebaseAuth.instance;
     return DefaultTabController(
       length: 5,
       child: Scaffold(
@@ -37,7 +35,6 @@ class StoreScreen extends StatelessWidget {
         ),
         body: NestedScrollView(
           headerSliverBuilder: (_, innerBoxIsScrolled) {
-            auth.createUserWithEmailAndPassword(email: "", password: "");
             return [
               SliverAppBar(
                 surfaceTintColor: Colors.transparent,
