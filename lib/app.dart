@@ -17,6 +17,7 @@ import 'package:e_commerce_app/features/shop/screens/store/store.dart';
 import 'package:e_commerce_app/features/shop/screens/subcategory/subcategory.dart';
 import 'package:e_commerce_app/navigation_menu.dart';
 import 'package:e_commerce_app/splash_screen.dart';
+import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -35,7 +36,7 @@ class MainApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: MyAppTheme.lightTheme,
       darkTheme: MyAppTheme.darkTheme,
-      home: NavigationMenu(),
+      home: const Scaffold(backgroundColor: AppColors.primary, body: Center(child: CircularProgressIndicator(color: Colors.white,),),),
     );
   }
 }

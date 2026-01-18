@@ -23,7 +23,7 @@ class EmailVerification extends StatelessWidget {
             padding: const EdgeInsets.only(right: 5),
             child: IconButton(
               onPressed: () {
-                Get.offAll(() => Login());
+                Get.offAll(() => LoginScreen());
               },
               icon: Icon(CupertinoIcons.clear),
             ),
@@ -75,7 +75,7 @@ class EmailVerification extends StatelessWidget {
                     Get.to(
                       () => SuccessScreen(
                         onPressed: () {
-                          Get.offAll(() => const Login());
+                          Get.offAll(() => const LoginScreen());
                         },
                         image: AppImages.staticSuccessIllustration,
                         title: AppTexts.yourAccountCreatedTitle,

@@ -79,7 +79,7 @@ class LoginForm extends StatelessWidget {
           ),
           const SizedBox(height: AppSizes.spaceBtwItems),
           SizedBox(
-            height: 50,
+            // height: 50,
             width: double.infinity,
             child: OutlinedButton(
               style: OutlinedButton.styleFrom(

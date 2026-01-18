@@ -19,7 +19,7 @@ class ResetPassword extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              Get.off(() => Login());
+              Get.off(() => LoginScreen());
             },
             icon: Icon(CupertinoIcons.clear),
           ),
