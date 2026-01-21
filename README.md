@@ -8,11 +8,17 @@ The project focuses on clean code practices, modular structure, state management
 ## ✨ Key Highlights
 
 • 🧩 Clean & scalable architecture
+
 • 🛍️ Product listing & product details
+
 • 🛒 Cart management (Add / Remove / Update items)
+
 • 🧠 State management for reactive UI
+
 • 📱 Fully responsive UI
+
 • ⚠️ Loading states & error handling
+
 • 🚀 Optimized performance & smooth navigation
 
 ---
