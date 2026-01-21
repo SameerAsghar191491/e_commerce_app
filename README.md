@@ -57,6 +57,8 @@ The project focuses on clean code practices, modular structure, state management
 
 This project is inspired by real-world e-commerce applications like Amazon, Daraz, and Shopify, focusing on how large-scale apps manage UI, state, and data flow.
 
+This E-Commerce app is a project of T_Store by Coding With-T on Youtube with complete playlist upon it.
+
 The goal of building this app was to practice scalable Flutter architecture, improve state management skills, and understand production-ready app structure.
 
 ## 🧑‍💻 Author
