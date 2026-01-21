@@ -25,7 +25,7 @@ The project focuses on clean code practices, modular structure, state management
 
 ## 📸 Screenshots
 
-<p align="start"> <img src="assets/project_images/SplashScreen.jpg" width="220"/> 
+<p align="start">
  <img src="assets/project_images/HomeScreen.jpg" width="220"/> 
  <img src="assets/project_images/StoreScreen.jpg" width="220"/> 
  <img src="assets/project_images/SettingScreen.jpg" width="220"/> 
